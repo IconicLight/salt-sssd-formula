@@ -1,12 +1,20 @@
-
-{% set sssd = {
-    'lookup': salt['grains.filter_by']({
-        'Debian': {
+{% set sssd = salt['grains.filter_by']({
+        'Arch': {
+            'package': 'sssd',
+            'service': 'sssd',
+            'sssd_conf': '/etc/sssd/sssd.conf'
+        },
+		'Debian': {
             'package': 'sssd',
             'service': 'sssd',
             'sssd_conf': '/etc/sssd/sssd.conf'
         },
         'RedHat': {
+            'package': 'sssd',
+            'service': 'sssd',
+            'sssd_conf': '/etc/sssd/sssd.conf'
+        },
+		'Suse': {
             'package': 'sssd',
             'service': 'sssd',
             'sssd_conf': '/etc/sssd/sssd.conf'
@@ -18,4 +26,3 @@
         }
     })
 } %}
-

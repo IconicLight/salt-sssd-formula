@@ -1,8 +1,6 @@
-================
-sssd-formula
-================
+sssd
 
-This formula installs and configures the System Security Services Daemon (sssd).
+Formula to install and configures the System Security Services Daemon (sssd).
 
 .. note::
 
